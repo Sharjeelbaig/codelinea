@@ -1,4 +1,5 @@
 # Codelinea
+![logo](https://user-images.githubusercontent.com/29815204/234738885-5f1c1334-79fd-4592-afb7-276828ab7565.png)
 
 Codelinea is a project designed to help developers better understand code snippets. With its intuitive interface and powerful features, Codelinea is the perfect tool for anyone who wants to delve deeper into the world of programming.
 
