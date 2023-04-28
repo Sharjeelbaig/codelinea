@@ -1,5 +1,12 @@
 # Codelinea
-![logo](https://user-images.githubusercontent.com/29815204/234738885-5f1c1334-79fd-4592-afb7-276828ab7565.png)
+
+| Logo | Information |
+| :---: | :--- |
+| ![logo](https://user-images.githubusercontent.com/29815204/234738885-5f1c1334-79fd-4592-afb7-276828ab7565.png) | **Code Linea**<br>Code explainer site for developers |
+
+
+
+![Framer Motion](https://user-images.githubusercontent.com/29815204/235071575-e4a56669-0ddb-4333-b046-f1f134f69125.png)
 
 Codelinea is a project designed to help developers better understand code snippets. With its intuitive interface and powerful features, Codelinea is the perfect tool for anyone who wants to delve deeper into the world of programming.
 
