@@ -10,6 +10,7 @@
 
 Codelinea is a project designed to help developers better understand code snippets. With its intuitive interface and powerful features, Codelinea is the perfect tool for anyone who wants to delve deeper into the world of programming.
 
+[Try it! click here for viewing this project live](https://codelinea.web.app)
 ## Features
 
 - Input area to upload code snippets
