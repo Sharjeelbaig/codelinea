@@ -14,8 +14,8 @@ Codelinea is a project designed to help developers better understand code snippe
 
 - Input area to upload code snippets
 - Output area with clear and concise explanations of the code
-- Search function to find code snippets that are similar to your own
-- Collaborative features to share code snippets with colleagues and get feedback from other developers
+- Supports various languages
+- Also Provide a sample code snippet and explain it
 
 ## Benefits
 
