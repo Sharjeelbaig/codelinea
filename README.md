@@ -26,7 +26,7 @@ Codelinea is a project designed to help developers better understand code snippe
 
 ## Usage
 
-To use Codelinea, simply input your code snippet into the input area and hit the "submit" button. The platform will then provide an explanation of the code in the output area. You can also use the search function to find similar code snippets and collaborate with other developers to get feedback on your code.
+To use Codelinea, simply input your code snippet into the input area and hit the "submit" button. The platform will then provide an explanation of the code in the output area.
 
 ## Contributing
 
