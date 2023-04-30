@@ -38,4 +38,4 @@ Codelinea is licensed under the MIT License. See the `LICENSE` file for more inf
 
 ## Acknowledgments
 
-Codelinea was inspired by the need for a tool to help developers better understand code snippets. We would like to thank the open-source community for their contributions to this project.
+Codelinea was inspired by the need for a tool to help developers better understand code snippets. We would like to thank the open-source community for in case if they contributed to this project.
