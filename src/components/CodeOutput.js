@@ -40,8 +40,12 @@ function CodeOutput() {
         <h6>{sampleExplanation}</h6>
         </>
         }
+        {
+          explanation && <>
         <ChatBox />
 <QuestioningBar />        
+</>
+}
         </div>
   );
 }

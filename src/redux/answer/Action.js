@@ -24,11 +24,11 @@ export const setAnswer = (question, code) => {
         "https://codelinea.azurewebsites.net/ask",
         requestOptions
       );
-      const result = await response.text();
+      const result = await response.json();
       console.log(result)
       dispatch({
         type: SET_ANSWER,
-        answer: result,
+        answer: result.answer,
       });
     } catch (error) {
       alert("An error has occurred ", error);

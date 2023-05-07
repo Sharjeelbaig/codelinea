@@ -1,9 +1,18 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { setQuestion } from '../redux/question/Action';
+import AskButton from './AskButton';
 
 export default function QuestioningBar() {
     const language = useSelector(state => state.OutputReducer.language)
+    const question = useSelector(state => state.QuestionReducer.question)
     
+    
+    const dispatch = useDispatch()
+    
+    const handleQuestionInputChange = (text) => {
+      dispatch(setQuestion(text))
+    }
   return (
     <div
     className='questioning-bar-container'
@@ -13,12 +22,10 @@ export default function QuestioningBar() {
     type='text'
     placeholder="Ask something you didn't understand"
     disabled={language ? false : true}
+    onChange={text => handleQuestionInputChange(text.target.value)}
+    value={question}
     />
-    <button
-    className='questioning-bar-submit-button'
-    >
-        ask
-        </button>
+    <AskButton />
     </div>
   )
 }
