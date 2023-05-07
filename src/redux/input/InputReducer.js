@@ -1,7 +1,7 @@
 import { SET_INPUT } from '../constants';
 
 const INIT_STATE = {
-  code: ''
+  input: ''
 };
 
 const InputReducer = (state = INIT_STATE, action) => {
