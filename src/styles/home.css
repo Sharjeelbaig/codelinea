@@ -198,7 +198,7 @@
     }
 
     .questioning-bar-container{
-        background-color: #1a1b2659;
+        background-color: #1a1b26b0;
         height: 20px;
         width: 100%;
         border: 1px solid #282a36;
@@ -227,10 +227,74 @@
         width:100%;
         background-color: #282a36;
         position: absolute;
+        overflow-y: scroll;
         bottom:0;
         right:0;
+        padding: 1rem;
     }
     
+    .chatbox-header{
+        display: flex;
+        justify-content: space-between;
+    }
+    .chatbox-header > button {
+        transition: 1s;
+        background-color: #1a1b26;
+        color: white;
+        border: 1px solid #282a36;
+        border-radius: 10px;
+        align-items: center;
+        height: fit-content;
+        padding: 20px;
+    }
+    .chatbox-header > button:hover {
+        background-color: #1E1E1E;
+        cursor: pointer;
+    }
+    .message-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+        border: 1px solid #555;
+  border-radius: 10px;
+      }
+      
+      .user {
+        flex-direction: row-reverse;
+      }
+      
+      .message-sender {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        margin-left: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #303030;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        color: #FFFFFF;
+      }
+      
+      .user .message-sender {
+        background-color: #1E1E1E;
+      }
+      
+      .message-text {
+        font-size: 14px;
+        line-height: 18px;
+        color: #FFFFFF;
+        max-width: 60%;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+      }
+      
+      
+
+
     /* Responsive styles */
     @media only screen and (max-width: 600px) {
     .header {
