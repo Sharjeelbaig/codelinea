@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import LanguageLogo from './LanguageLogo';
-import { CopyBlock, dracula } from 'react-code-blocks';
+import QuestioningBar from './QuestioningBar';
+import ChatBox from './ChatBox'
 
 function CodeOutput() {
+
   const explanation = useSelector(state => state.OutputReducer.explanation)
-  const language = useSelector(state => state.OutputReducer.language)
+  
   const sample = useSelector(state => state.OutputReducer.sample)
   const depthExplanation = useSelector(state => state.OutputReducer.depthExplanation)
   const sampleExplanation = useSelector(state => state.OutputReducer.sampleExplanation)
@@ -38,7 +40,12 @@ function CodeOutput() {
         <h6>{sampleExplanation}</h6>
         </>
         }
-        
+        {
+          explanation && <>
+        <ChatBox />
+<QuestioningBar />        
+</>
+}
         </div>
   );
 }
