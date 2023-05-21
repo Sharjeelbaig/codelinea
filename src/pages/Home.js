@@ -7,6 +7,7 @@ import Logo from '../components/Logo';
 import { SocialIcon } from 'react-social-icons';
 import Header from '../components/Header';
 import HireMe from '../components/HireMe';
+import Welcome from '../components/Welcome';
 
 function CodeExplainer() {
 
@@ -14,7 +15,7 @@ function CodeExplainer() {
   return (
     <div className="app">
     <Header />
-    
+    <Welcome />
     <main className="main">
       <section className="code-input-section">
         <h2>Input</h2>
