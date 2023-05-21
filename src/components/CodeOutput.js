@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import LanguageLogo from './LanguageLogo';
 import QuestioningBar from './QuestioningBar';
@@ -7,10 +7,11 @@ import ChatBox from './ChatBox'
 function CodeOutput() {
 
   const explanation = useSelector(state => state.OutputReducer.explanation)
-  
+  const chat = useSelector((state) => state.ChatReducer.chat);
   const sample = useSelector(state => state.OutputReducer.sample)
   const depthExplanation = useSelector(state => state.OutputReducer.depthExplanation)
   const sampleExplanation = useSelector(state => state.OutputReducer.sampleExplanation)
+  const [isChatBoxOpen, setIsChatBoxOpen] = useState(false);
   const speak = () => {
     const speach = new SpeechSynthesisUtterance()
     speach.text = explanation;
@@ -21,8 +22,23 @@ function CodeOutput() {
     speak()
   }, [explanation])
 
+  useEffect(()=>{
+  chat.length &&
+  setIsChatBoxOpen(true);
+  },[chat])
+
+  useEffect(() => {
+    if (isChatBoxOpen) {
+      document.getElementById('code-output').style.overflowY = 'hidden';
+      document.getElementById('code-output').scrollTop = 0;
+    } else {
+      document.getElementById('code-output').style.overflowY = 'scroll';
+    }
+  }, [isChatBoxOpen]);
+  
+
   return (    
-    <div className='code-output'>
+    <div className='code-output' id='code-output'>
     <button onClick={speak}>
     🔊
     </button>
@@ -42,7 +58,10 @@ function CodeOutput() {
         }
         {
           explanation && <>
-        <ChatBox />
+        <ChatBox
+        isOpen={isChatBoxOpen}
+        setIsOpen={setIsChatBoxOpen}
+        />
 <QuestioningBar />        
 </>
 }

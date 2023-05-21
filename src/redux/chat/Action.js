@@ -1,6 +1,6 @@
-import { SET_ANSWER } from "../constants";
+import { SET_CHAT } from "../constants";
 
-export const setAnswer = (question, code) => {
+export const setChat = (question, code) => {
   return async (dispatch) => {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
@@ -18,7 +18,7 @@ export const setAnswer = (question, code) => {
       body: urlencoded,
       redirect: "follow",
     };
-
+ 
     try {
       const response = await fetch(
         "https://codelinea.azurewebsites.net/ask",
@@ -27,7 +27,8 @@ export const setAnswer = (question, code) => {
       const result = await response.json();
       console.log(result)
       dispatch({
-        type: SET_ANSWER,
+        type: SET_CHAT,
+        question: question,
         answer: result.answer,
       });
     } catch (error) {

@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setAnswer } from '../redux/answer/Action';
+import { setChat } from '../redux/chat/Action';
+import ReactLoading from "react-loading";
 
 export default function AskButton() {
     const dispatch = useDispatch()
@@ -12,19 +13,30 @@ export default function AskButton() {
       event.preventDefault();
       setLoading(true);
       try {
-        await dispatch(setAnswer(question,code));
+        await dispatch(setChat(question,code));
       } catch {
         console.log("error while fetching the api");
       } finally {
         setLoading(false);
       }
     };
-  return (
+  return (<>
+  {loading ? 
+        <ReactLoading
+          type="cylon"
+          color="#757575"
+          height={"20%"}
+          width={"20%"}
+          className="loading-overlay"
+        />
+       :
     <button
     className='questioning-bar-submit-button'
     onClick={handleSubmit}
     >
         ask
         </button>
+}
+        </>
   )
 }
