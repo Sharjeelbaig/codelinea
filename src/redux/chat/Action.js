@@ -21,7 +21,7 @@ export const setChat = (question, code) => {
  
     try {
       const response = await fetch(
-        "https://codelinea.azurewebsites.net/ask",
+        "https://shazi-codelinea.azurewebsites.net/ask",
         requestOptions
       );
       const result = await response.json();
