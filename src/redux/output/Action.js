@@ -20,7 +20,7 @@ export const setOutput = (input) => {
 
     try {
       const response = await fetch(
-        "https://codelinea.azurewebsites.net/explain",
+        "https://shazi-codelinea.azurewebsites.net/explain",
         requestOptions
       );
       const result = await response.text();
